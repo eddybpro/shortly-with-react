@@ -11,16 +11,18 @@ function App() {
   const [shortenedLinks, setShortenedLinks] = useState([]);
 
   const addToShortenedList = (data) => {
-    const link = {
-      id:
-        shortenedLinks.length == 0
-          ? 1
-          : shortenedLinks[shortenedLinks.length - 1].id + 1,
-      links: data,
-    };
-    setShortenedLinks((prev) => [...prev, link]);
+    if (!shortenedLinks.includes(data)) {
+      const link = {
+        id:
+          shortenedLinks.length == 0
+            ? 1
+            : shortenedLinks[shortenedLinks.length - 1].id + 1,
+        links: data,
+      };
+      setShortenedLinks((prev) => [...prev, link]);
+    }
   };
-  console.log(shortenedLinks);
+
   const list = JSON.parse(localStorage.getItem("list")) || [];
   const storedList = [...shortenedLinks, ...list];
 
