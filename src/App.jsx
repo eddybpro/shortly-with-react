@@ -24,11 +24,13 @@ function App() {
   };
 
   const list = JSON.parse(localStorage.getItem("list")) || [];
+
   const storedList = [...shortenedLinks, ...list];
 
   useEffect(() => {
     localStorage.setItem("list", JSON.stringify(shortenedLinks));
-  }, [shortenedLinks]);
+    setShortenedLinks([]);
+  }, []);
 
   return (
     <>
