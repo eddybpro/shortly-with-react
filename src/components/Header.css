@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(260, 8%, 14%);
+  --color-brand-2: hsl(257, 7%, 63%);
+  --color-brand-3: hsl(255, 11%, 22%);
+  --color-brand-4: hsl(0, 87%, 67%);
+
+  --color-site-1: hsl(0, 0%, 75%);
+  --color-site-2: hsl(180, 66%, 49%);
+  --color-site-3: hsl(257, 27%, 26%);
+
+  --font-poppins: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-poppins);
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 500;
+}
+
+header {
+  padding: 3rem 0 5rem;
+}
+
+.HeaderBox-ImgBox {
+  width: 100%;
+  overflow: hidden;
+  padding-left: 2rem;
+  margin-bottom: 3rem;
+}
+
+.HeaderBox-ImgBox > img {
+  width: 140%;
+}
+
+.HeaderBox-TxtBox {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.HeaderBox-TxtBox-Title {
+  font-size: 4rem;
+  color: var(--color-brand-1);
+  margin-bottom: 2rem;
+}
+
+.HeaderBox-TxtBox-Para {
+  font-size: 1.8rem;
+  color: var(--color-brand-2);
+  margin-bottom: 2rem;
+}
+
+.HeaderBox-TxtBox-Btn {
+  padding: 1.25rem 3rem;
+  background-color: var(--color-site-2);
+  border: none;
+  outline: none;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.8rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.HeaderBox-TxtBox-Btn:hover {
+  opacity: 0.6;
+}
+
+@media screen and (min-width: 768px) {
+  .HeaderBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    grid-auto-flow: dense;
+  }
+
+  .HeaderBox-ImgBox {
+    grid-column: 2;
+  }
+
+  .HeaderBox-TxtBox {
+    grid-column: 1;
+    text-align: left;
+  }
+
+  .HeaderBox-TxtBox-Title {
+    font-size: 6rem;
+  }
+
+  .HeaderBox-TxtBox-Para {
+    max-width: 50rem;
+  }
+}

@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(260, 8%, 14%);
+  --color-brand-2: hsl(257, 7%, 63%);
+  --color-brand-3: hsl(255, 11%, 22%);
+  --color-brand-4: hsl(0, 87%, 67%);
+
+  --color-site-1: hsl(0, 0%, 75%);
+  --color-site-2: hsl(180, 66%, 49%);
+  --color-site-3: hsl(257, 27%, 26%);
+
+  --font-poppins: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-poppins);
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 500;
+}
+
+.BoostBox {
+  padding: 10rem 2rem;
+  text-align: center;
+  background: url("../assets/bg-boost-mobile.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--color-site-3);
+}
+
+.BoostBox-Title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.BoostBox-Btn {
+  background-color: var(--color-site-2);
+  padding: 1.5rem 3rem;
+  color: hsl(0, 0%, 100%);
+  border: none;
+  outline: none;
+  border-radius: 3.5rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.BoostBox-Btn:hover {
+  filter: brightness(120%);
+}
+
+@media screen and (min-width: 768px) {
+  .BoostBox {
+    background: url("../assets/bg-boost-desktop.svg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--color-site-3);
+  }
+
+  .BoostBox-Title {
+    font-size: 3.5rem;
+  }
+}

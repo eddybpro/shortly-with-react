@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(260, 8%, 14%);
+  --color-brand-2: hsl(257, 7%, 63%);
+  --color-brand-3: hsl(255, 11%, 22%);
+  --color-brand-4: hsl(0, 87%, 67%);
+
+  --color-site-1: hsl(0, 0%, 75%);
+  --color-site-2: hsl(180, 66%, 49%);
+  --color-site-3: hsl(257, 27%, 26%);
+
+  --font-poppins: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-poppins);
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 500;
+}
+
+.StatisticsBox {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.StatisticsBox-Title {
+  font-size: 3rem;
+  color: var(--color-brand-1);
+  margin-bottom: 2rem;
+}
+
+.StatisticsBox-Para {
+  font-size: 1.8rem;
+  color: var(--color-brand-3);
+  margin-bottom: 6rem;
+}
+
+.StatisticsBox-Cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8rem;
+  margin: 3rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .StatisticsBox-Title {
+    font-size: 4rem;
+  }
+
+  .StatisticsBox-Para {
+    max-width: 60rem;
+    margin: 0 auto 6rem;
+  }
+
+  .StatisticsBox-Cards {
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 115rem;
+    margin: auto;
+  }
+}
